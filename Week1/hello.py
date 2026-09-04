@@ -1,10 +1,37 @@
-followers = 100
+# Activity 1 and 2
+# print("===================================")
+# print("Welcome here")
+# print("My first post!")
+# print("===================================")
 
-followers +=50
-print("Day 1:", followers)
+# username = "cool_creator"
+# bio = "Fun Blogger"
+# followers = 100
 
-followers +=20
-print("Day 2:", followers)
+# print("Username:", username)
+# print("Bio:", bio)
+# print("Followers:", followers)
 
-followers -=10
-print("Day 3:", followers)
+
+# Activity 3
+# followers = 100
+
+# followers +=50
+# print("Day 1:", followers)
+
+# followers +=20
+# print("Day 2:", followers)
+
+# followers -=10
+# print("Day 3:", followers)
+
+#Activity 4
+username = input("Enter username: ")
+age = input("Enter Age: ")
+category = input("Enter Content Category: ")
+
+print("\n Instagram Profile")
+print("=========================")
+print("Username:", username)
+print("Age:", age)
+print("Category:", category)
