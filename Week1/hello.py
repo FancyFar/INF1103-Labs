@@ -25,9 +25,9 @@
 # followers -=10
 # print("Day 3:", followers)
 
-#Activity 4
+#Activity 4 and 5
 username = input("Enter username: ")
-age = input("Enter Age: ")
+age = int(input("Enter Age: "))
 category = input("Enter Content Category: ")
 
 print("\n Instagram Profile")
@@ -35,3 +35,8 @@ print("=========================")
 print("Username:", username)
 print("Age:", age)
 print("Category:", category)
+
+if age>40 and category == "fun":
+    print("You are old what is fun for you??")
+
+print(type(age))
