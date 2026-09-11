@@ -9,6 +9,10 @@ while status:
         stock = int(stock)
         inventory += stock
 
+    elif stock.startswith('-') and stock[1:].isdigit():
+        failedEntry += 1
+        print("Business rule: stock quantity cannot be negative.")
+
        
     else:
         failedEntry += 1
