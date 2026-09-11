@@ -8,6 +8,10 @@ while status:
     if stock.isdigit():
         stock = int(stock)
         inventory += stock
+        
+        if inventory > 500:
+            print("Alert! Inventory has exceeded 500 units!") 
+            break
 
     elif stock.startswith('-') and stock[1:].isdigit():
         failedEntry += 1
