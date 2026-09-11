@@ -5,10 +5,15 @@ status = True
 while status:
     stock = input("Please enter a stock quantity: ")
 
-    if stock.isdigit():
+    if stock == 'quit':
+        print("Total Units Processed:", inventory)
+        print("Number of Failed/Rejected Entries:", failedEntry)
+        status = False
+
+    elif stock.isdigit():
         stock = int(stock)
         inventory += stock
-        
+
         if inventory > 500:
             print("Alert! Inventory has exceeded 500 units!") 
             break
@@ -17,15 +22,6 @@ while status:
         failedEntry += 1
         print("Business rule: stock quantity cannot be negative.")
 
-       
     else:
         failedEntry += 1
         print("Error: Please enter a valid integer.")
-
-
-
-
-    
-    
-
-    
