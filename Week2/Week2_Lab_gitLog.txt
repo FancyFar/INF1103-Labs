@@ -1,0 +1,29 @@
+commit 4f44cc50cfd5e2c176677b082a3f102a34e3165b (HEAD -> master)
+Author: ShaniaW <2604724@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 15:52:51 2026 +0800
+
+    Reporting
+
+commit 913e36f9727bf6ca6d510ce6278298c5c005f7e3
+Author: ShaniaW <2604724@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 15:52:12 2026 +0800
+
+    Trigger Overstock Alert
+
+commit 88f5ac0da34fb9656a64a441cfe57f380a6ee9af
+Author: ShaniaW <2604724@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 15:49:55 2026 +0800
+
+    Enforce business rules
+
+commit 7e9337973c08887adee80bccc28a06186b0551ed
+Author: ShaniaW <2604724@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 15:48:18 2026 +0800
+
+    Handle invalid input
+
+commit b09d087add43f4c4b2b2a5c25c15619c557f0624 (origin/master)
+Author: ShaniaW <2604724@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 14:43:06 2026 +0800
+
+    Add inventory auditor
