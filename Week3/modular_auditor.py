@@ -45,7 +45,7 @@ while status:
         total_Price = process_delivery(total_Price, valid_input)
 
         if total_Price > 500:
-            print("Alert! Total price has exceeded 500 units!") 
+            print("Alert! Total price has exceeded 500 !") 
             break
 
         tax = calculate_tax(valid_input)
