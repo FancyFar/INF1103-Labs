@@ -1,3 +1,4 @@
+inventory_file = "orders.txt"
 total_Price = 0
 failed_Entry = 0
 deliveries_processed = 0
@@ -33,7 +34,7 @@ def get_valid_input():
 def load_inventory():
     try:
         print("Current Orders:" + '\n')
-        with open("orders.txt", "r") as file:
+        with open(inventory_file, "r") as file:
             data = file.readlines()
 
             for item in data:
@@ -46,7 +47,7 @@ def load_inventory():
 
 def save_inventory(product_name, product_quantity):
     try: 
-        with open("orders.txt", "r") as file:
+        with open(inventory_file, "r") as file:
             lines = file.readlines()
             if len(lines) > 0:
                 last_line = lines[-1].strip()
@@ -59,7 +60,7 @@ def save_inventory(product_name, product_quantity):
         product_code = 1001
 
     try:
-        with open("orders.txt", "a") as file:
+        with open(inventory_file, "a") as file:
             entry = f'{product_code}, {product_name}, {product_quantity}' + '\n'
             file.write(entry)
 
