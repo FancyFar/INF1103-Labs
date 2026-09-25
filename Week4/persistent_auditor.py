@@ -1,5 +1,3 @@
-
-inventory_file = "orders.txt"
 total_Price = 0
 failed_Entry = 0
 deliveries_processed = 0
