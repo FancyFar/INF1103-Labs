@@ -48,24 +48,28 @@ def load_inventory():
 
 def save_inventory(product_name, product_quantity):
     try: 
-        
         with open("orders.txt", "r") as file:
             lines = file.readlines()
             if len(lines) > 0:
                 last_line = lines[-1].strip()
                 product_code = int(last_line.split(",")[0]) + 1
+
             else:
                 product_code = 1001
 
-            with open("orders.txt", "a") as file:
-                entry = f'{product_code}, {product_quantity}, {product_name}' + '\n'
-                file.write(entry)
+    except FileNotFoundError:
+        product_code = 1001
 
-        print("Order successfully saved to orders.txt")
+    try:
+        with open("orders.txt", "a") as file:
+            entry = f'{product_code}, {product_name}, {product_quantity}' + '\n'
+            file.write(entry)
 
+            print('\n' + "New Order Added:")
+            print(entry)
+            print("Order successfully saved to orders.txt")
     except:
         print("Order failed to save to order.txt")
-
 
 
 
@@ -81,7 +85,7 @@ while status:
 
 
     if valid_input[0] == 'quit':
-        generate_report(total_Price, failed_Entry)
+        # generate_report(total_Price, failed_Entry)
         status = False
 
     # elif isinstance(user_input[1], int):
