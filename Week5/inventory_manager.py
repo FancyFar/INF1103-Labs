@@ -75,6 +75,26 @@ def update_stock(inventory):
     except Exception as e:
         print(f"An error has occurred: {e}")
 
+            
+
+def search_product(inventory):
+    print("\nSearch Product")
+    product_id = input("Enter Product ID: ")
+
+    for item in inventory:
+        if item["id"] == product_id:
+            print("\nProduct Found")
+            print("-" * 50)
+            print(
+                f"ID: {item["id"]}"
+                f"\nName: {item["name"]}"
+                f"\nPrice: ${item["price"]:.2f}"
+                f"\nStock: {item["stock"]}"
+            )
+            print("-" * 50)
+            return
+
+    print("Product not found.")
 
 def load_inventory():
     if os.path.exists(INVENTORY_FILE):
@@ -132,14 +152,14 @@ def main():
         if option == "1":
             display_all(inventory)
 
-        # elif option == "2":
-        #     add_product(inventory)
+        elif option == "2":
+            add_product(inventory)
 
-        # elif option == "3":
-        #     update_stock(inventory)
+        elif option == "3":
+            update_stock(inventory)
 
-        # elif option == "4":
-        #     search_product(inventory)
+        elif option == "4":
+            search_product(inventory)
 
         elif option == "5":
             print("Saving inventory...")
@@ -157,5 +177,3 @@ def main():
 
 
 main()
-
-
