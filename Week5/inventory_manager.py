@@ -12,7 +12,7 @@ def display_all(inventory):
     else:
         for item in inventory:
             print(
-                f"ID: {item["id"]} | Name: {item["name"]} | Price: ${item["price"]:.2f} | Stock: {item["stock"]}" 
+                f"ID: {item['id']} | Name: {item['name']} | Price: ${item['price']:.2f} | Stock: {item['stock']}" 
             )
     print('-' * 50)
 
@@ -53,10 +53,10 @@ def update_stock(inventory):
     product_id = input("Product ID: ")
 
     for item in inventory:
-        if item["id"] == product_id:
+        if item['id'] == product_id:
             print("\nProduct Found:")
-            print(f"Name: {item["name"]}")
-            print(f"Current Stock: {item["stock"]}")
+            print(f"Name: {item['name']}")
+            print(f"Current Stock: {item['stock']}")
 
             new_stock = int(input("\nNew Stock Quantity: "))
 
@@ -86,10 +86,10 @@ def search_product(inventory):
             print("\nProduct Found")
             print("-" * 50)
             print(
-                f"ID: {item["id"]}"
-                f"\nName: {item["name"]}"
-                f"\nPrice: ${item["price"]:.2f}"
-                f"\nStock: {item["stock"]}"
+                f"ID: {item['id']}"
+                f"\nName: {item['name']}"
+                f"\nPrice: ${item['price']:.2f}"
+                f"\nStock: {item['stock']}"
             )
             print("-" * 50)
             return

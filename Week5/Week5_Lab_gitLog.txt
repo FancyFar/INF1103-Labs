@@ -1,0 +1,17 @@
+commit e678ec8c519d2ac79dd2d80645bc992144a0eb2c
+Author: ShaniaW <shaniawsh@gmail.com>
+Date:   Sat Oct 3 15:27:58 2026 +0800
+
+    final save_inventory
+
+commit cff38370ae7d40a44c2c6b9353dae8c32c8e8755
+Author: ShaniaW <shaniawsh@gmail.com>
+Date:   Sat Oct 3 15:27:24 2026 +0800
+
+    created Dictionary and adding few products
+
+commit 563e3ca4c39faae03e049a937368564757e18363
+Author: ShaniaW <shaniawsh@gmail.com>
+Date:   Sat Oct 3 15:24:26 2026 +0800
+
+    load_inventory() is working
