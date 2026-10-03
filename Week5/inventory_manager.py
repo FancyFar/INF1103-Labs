@@ -16,6 +16,66 @@ def display_all(inventory):
             )
     print('-' * 50)
 
+def add_product(inventory):
+    print("\nAdd New Product")
+
+    product_id = input("Product ID: ")
+
+    for item in inventory:
+        if item["id"] == product_id:
+            print("product ID already exists!")
+            return
+
+    product_name = input("Product Name: ")
+    product_price = float(input("Price: "))
+    product_stock_quantity = int(input("Stock Quantity: "))
+
+    new_product = {
+        "id": product_id,
+        "name": product_name,
+        "price": product_price,
+        "stock": product_stock_quantity
+    }
+
+    inventory.append(new_product)
+    
+    try:
+        with open(INVENTORY_FILE, "w") as file:
+            json.dump(inventory, file, indent=4)
+
+        print("\nProduct added successfully!")
+
+    except Exception as e:
+        print(f"An error has occurred: {e}")
+
+def update_stock(inventory):
+    print("\nUpdate Stock")
+    product_id = input("Product ID: ")
+
+    for item in inventory:
+        if item["id"] == product_id:
+            print("\nProduct Found:")
+            print(f"Name: {item["name"]}")
+            print(f"Current Stock: {item["stock"]}")
+
+            new_stock = int(input("\nNew Stock Quantity: "))
+
+        
+            item["stock"] = new_stock
+
+    try:
+        with open(INVENTORY_FILE, "w") as file:
+            json.dump(inventory, file, indent=4)
+
+            print("\nStock updated successfully!")
+            return
+
+        print("\nProduct added successfully!")
+
+    except Exception as e:
+        print(f"An error has occurred: {e}")
+
+
 def load_inventory():
     if os.path.exists(INVENTORY_FILE):
         print("\ninventory.json found.")
