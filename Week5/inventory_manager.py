@@ -1,7 +1,7 @@
 import json
 import os
 
-INVENTORY_FILE = 'inventory.json'
+INVENTORY_FILE = 'Week5/inventory.json'
 
 def display_all(inventory):
     print("\nCurrent Inventory")
