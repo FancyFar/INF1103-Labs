@@ -50,17 +50,6 @@ def add_product(inventory):
     print("Product added successfully!")
     return inventory
 
-    # try:
-    #     with open(INVENTORY_FILE, "w") as file: #creates a new file if file doesn't exist
-    #         json.dump(new_item, file, indent=4)
-    #         print("\nProduct added successfully!")
-
-    # except TypeError as e:
-    #     print(f"Serialization Error: Your data contains a non-JSON object. Details: {e}")
-
-    # except OSError as e:
-    #     print(f"System Error: A file system error occurred. Details: {e}")
-
 
 def update_stock(inventory):
     print("\nUpdate Stock")
