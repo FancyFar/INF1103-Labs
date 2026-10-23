@@ -191,7 +191,6 @@ def main():
 
             print("\nThank you for using Inventory Management System.\nProgram terminated.")
             break
-            
 
 if __name__ == "__main__":
     main()
