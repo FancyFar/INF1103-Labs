@@ -1,6 +1,6 @@
 class Product:
     def __init__(self, product_id: str, name: str, price: float, stock: int):
-        self.__product_id = product_id # double underscore __ is
+        self.__product_id = product_id # double underscore __ is private
         self.__name = name
         self.__price = price
         self.__stock = stock
