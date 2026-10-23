@@ -188,7 +188,48 @@ def search_product(inventory: Inventory) -> None:
     product.display_information()
     print("-" * 50)
 
+def main() -> None:
+    print("=" * 50 + "INVENTORY MANAGEMENT SYSTEM" + "=" * 50)
 
+    inventory = load_inventory()
+
+    while True:
+        print("\n----------- MENU -----------")
+        print("1. Display All Products\n2. Add product\n3. Update Stock\n4. Search Product\n5. Save Inventory\n6. Exit ")
+        print("-" * 28)
+
+        option = input("Enter option: ").strip()
+
+        if option == "1":
+            inventory.display_all()
+
+        elif option == "2":
+            add_product(inventory)
+
+        elif option == "3":
+            update_stock(inventory)
+
+        elif option == "4":
+            search_product(inventory)
+
+        elif option == "5":
+            save_inventory(inventory)
+
+        elif option == "6":
+            print("\nSaving inventory before exit...")
+            save_inventory(inventory)
+
+            print(
+                "\nThank you for using Inventory Management System."
+                "\nProgram terminated."
+            )
+            break
+
+        else:
+            print("Invalid option. Please enter a number from 1 to 6.")
+
+if __name__ == "__main__":
+    main()
 
 
 
