@@ -17,6 +17,8 @@ def load_inventory() -> Inventory:
         with INVENTORY_FILE.open("r") as file:
             data = json.load(file)
 
+        print("inventory.json found.")
+
         if not isinstance(data, list):
             print("Error: Inventory JSON must contain a list,")
             print("Starting with empty inventory.")
@@ -185,11 +187,11 @@ def search_product(inventory: Inventory) -> None:
         return
 
     print("\nProduct Found\n" + "-" * 50)
-    product.display_information()
+    print(f"ID: {product.product_id}\nName: {product.name}\nPrice: ${product.price:.2f}\nStock: {product.stock}")
     print("-" * 50)
 
 def main() -> None:
-    print("=" * 50 + "INVENTORY MANAGEMENT SYSTEM" + "=" * 50)
+    print("=" * 50 +  "\nINVENTORY MANAGEMENT SYSTEM\n" + "=" * 50)
 
     inventory = load_inventory()
 
@@ -204,7 +206,8 @@ def main() -> None:
             inventory.display_all()
 
         elif option == "2":
-            add_product(inventory)
+            if add_product(inventory):
+                 print("Product added successfully!")
 
         elif option == "3":
             update_stock(inventory)

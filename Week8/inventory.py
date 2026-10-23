@@ -12,7 +12,6 @@ class Inventory:
             return False
 
         self.__products.append(product)
-        print("Product added successfully!")
         return True
 
     def search_product(self, product_id: str) -> Product | None:
