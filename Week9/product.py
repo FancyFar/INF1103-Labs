@@ -88,7 +88,7 @@ class PhysicalProduct(Product, CanBeShipped):
         #             f"Stock: {self._stock} | "
         #             f"Weight: {self.__weight}" )
 
-    def get_fulfilment_info(self) -> None:
+    def get_fulfilment_info(self) -> str:
         return "Physical product requires physical shipping."
 
     def calculate_shipping_cost(self) -> float:
@@ -119,7 +119,7 @@ class DigitalProduct(Product):
         #                     f"Stock: {self._stock} | "
         #                     f"Dowbload Size: {self.__download_size}" )
 
-    def get_fulfilment_info(self) -> None:
+    def get_fulfilment_info(self) -> str:
             return "Digital product is delivered digitally."
 
 
