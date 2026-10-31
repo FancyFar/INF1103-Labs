@@ -22,5 +22,13 @@
         "stock": 25,
         "type": "digital",
         "download_size": 300.0
+    },
+    {
+        "id": "P004",
+        "name": "Monitor",
+        "price": 299.99,
+        "stock": 20,
+        "type": "physical",
+        "weight": 600.0
     }
 ]
