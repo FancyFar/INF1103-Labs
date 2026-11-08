@@ -2,8 +2,8 @@ from product import Product
 
 class Inventory:
     def __init__(self):
-        # Your Inventory class already manages Product objects. 
-        # This is a useful example of aggregation: an Inventory groups Product objects, 
+        # Inventory class manages Product objects. 
+        # This is an example of aggregation: an Inventory groups Product objects, 
         # but the products can exist independently of the inventory.
         
         self.__products: list[Product] = []
